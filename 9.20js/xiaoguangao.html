@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小广告</title>
+	<script src="js/function.js"></script>
+	<style>
+	.box{
+		width: 100px;
+		height: 100px;
+		background: #C869EE;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<script>
+		window.onload=function(){
+			let box=$('.box')[0];
+			let t =setInterval(move,25);
+			let maxY=window.innerHeight-box.offsetHeight;
+			let maxX=window.innerWidth-box.offsetWidth;
+			let speed=3;
+			let speed1=3;
+			function move(){
+               let tops = box.offsetTop+speed;
+               let lefts=box.offsetLeft+speed1;
+               box.style.top=tops+'px';
+               box.style.left=lefts+'px';
+               if(tops>=maxY){
+               	// tops=maxY;
+               	speed*=-1;
+               }
+               if(tops<=0){
+               	// tops=0;
+               	speed*=-1;
+               }
+               if(lefts>=maxX){
+               	speed1*=-1;
+               }
+               if(lefts<=0){
+               	speed1*=-1;
+               }
+			}
+		}
+	</script>
+</body>
+</html>
+<!-- https://skylefang.github.io/9.20file/. -->
+<!-- https://skylefang.github.io/9.20file/ -->

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画2</title>
+	<script src="js/animate2.js"></script>
+	<script src="js/function.js"></script>
+	<style>
+	 .box{
+	 	width: 300px;
+		height: 300px;
+		background: #C869EE;
+		margin: 20px auto;
+	 }
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<script>
+	   // 一次就可以动画多个属性
+		window.onload=function(){
+			let box = $('.box')[0];
+			animate(box,{width:500,height:500})
+		}
+	</script>
+</body>
+</html>
